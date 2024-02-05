@@ -1,0 +1,150 @@
+
+.general{
+    width: 100%;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+    /* border-bottom: 2px solid #986; */
+    background: rgb(210, 205, 194);
+    /* width: 89%; */
+    height: 4.5rem;
+    box-shadow:  2px 4px rgb(241, 217, 209);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    padding: .5rem;
+    /* left: 0; */
+}
+
+.cart-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .1rem;
+}
+.linkDiv{
+    text-decoration: none;
+    background: #fff;
+    padding: .3rem;
+    border-radius: .3rem;
+    margin: .5rem;
+    transition: all 1s ease-in-out;
+}
+.linkDiv:hover{
+    transform: scale(1.2);
+}
+.generalFetch{
+    display: grid;
+    grid-template-columns: .9fr .9fr .9fr .9fr;
+    gap: 1rem;
+    margin-top: 6rem;
+}
+.fetched{
+    border: 2px solid #986;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    /* width: 20%; */
+    transition: all 1s ease-in-out;
+}
+.fetched:hover{
+    transform: scale(1.05);  
+}
+.fetched>img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: .5rem;
+}
+button{
+    margin: .2rem .5rem;
+    height: 2rem;
+}
+.cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fetchedCart{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.myCart{
+    border: 2px solid #ccc;
+    padding: 1rem;
+    margin-top: 6rem;
+    border-radius: 1rem;
+}
+.myCart>img{
+    width: 12rem;
+    height: 12rem;
+}
+.total{
+    font-weight: 600;
+    font-size: 2rem;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.item>img{
+    width: 20rem;
+    height: 16rem;
+}
+.navigation{
+    margin-top: 2rem;
+}
+@media screen and (max-width:600px){
+   .header{
+    display: flex;
+    gap: .1rem;
+    height: 2rem;
+    /* width: 100%; */
+   } 
+   .header h1{
+    padding: 0;
+    font-size: .9rem;
+   
+   }
+   .linkDiv{
+    padding: .2rem;
+    font-size: .65rem;
+   }
+   .generalFetch{
+    display: grid;
+    grid-template-columns: .7fr .7fr;
+   }
+   .fetched h2{
+    font-size: .5rem;
+   }
+   .fetchedCart{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* gap: .1rem; */
+    align-items: center;
+    justify-content: center;
+}
+.total{
+    font-size: 1rem;
+    font-weight: 800;
+    margin-left: 1rem;
+}
+}
+@media screen and (min-width:601px)and ( max-width: 1024px){
+    .generalFetch {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .fetchedCart{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
