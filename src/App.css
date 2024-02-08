@@ -1,0 +1,9 @@
+.darkMode{
+    background: #302626;
+    color: white;
+}
+.lightMode{
+    background: rgb(210, 205, 194);
+    color: black;
+    /* width: 100vw; */
+}
