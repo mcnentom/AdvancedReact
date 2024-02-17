@@ -38,7 +38,7 @@ function CartPage() {
       ) : (
         <p>Your cart is empty</p>
       )}
-      <Link to="/"className='linkDiv'>Back to Shopping</Link>
+      <Link to="/"className='linkDiv' id='link'>Back to Shopping</Link>
     </div>
   );
 }

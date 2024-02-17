@@ -1,9 +1,25 @@
 .darkMode{
     background: #302626;
     color: white;
+    background-size: cover;
+    /* height: 100vh; */
+   
 }
 .lightMode{
     background: rgb(210, 205, 194);
     color: black;
     /* width: 100vw; */
+}
+.btn{
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+}
+@media screen and (max-width:600px) {
+    .btn{
+        position: fixed;
+    right: 1rem;
+    margin-top: 3rem;
+    }
+    
 }

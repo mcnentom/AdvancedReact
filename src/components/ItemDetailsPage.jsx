@@ -36,7 +36,7 @@ function ItemDetailsPage() {
         <p> <strong style={{ color: '#000' }}>Description: </strong>{product.description}</p>
       </div>
       <button onClick={() => addToCart(product)}>Add to Cart</button>
-      <Link to="/"className='linkDiv'>Back to Shopping</Link>
+      <Link to="/"className='linkDiv' id='link'>Back to Shopping</Link>
       
     </div>
   );

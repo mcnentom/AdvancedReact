@@ -1,11 +1,11 @@
-// App.js
+
 import React, { createContext, useReducer, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ShoppingPage from './components/ShoppingPage';
 import ItemDetailsPage from './components/ItemDetailsPage';
 import CartPage from './components/CartPage';
 import Error from './Error'
-// import './App.css';
+import './App.css';
 
 export const myContext = createContext();
 
@@ -13,7 +13,8 @@ const initialState = {
   count: localStorage.getItem('itemCount') ? parseInt(localStorage.getItem('itemCount')) : 0,
 };
 
-const reducer = (state, action) => {
+
+const reducer = (state=initialState, action) => {
   switch (action.type) {
     case 'Increment':
       localStorage.setItem('itemCount', state.count + 1);
@@ -60,7 +61,7 @@ function App() {
   };
 
   const removeFromCart = (productId) => {
-    const updatedCartItems = cartItems.filter(item => item.id !== productId);
+    const updatedCartItems = cartItems.filter(item => {item.id !== productId });
     setCartItems(updatedCartItems);
     dispatch({ type: 'Decrement' });
   };
@@ -70,9 +71,9 @@ function App() {
 
   return (
     <div className={isDarkTheme ? 'darkMode' : 'lightMode'}>
-      {/* <button onClick={handleDarkMode} className='btn'>
-        {isDarkTheme ? 'Dark Mode' : 'light Mode'}
-      </button> */}
+      <button onClick={handleDarkMode} className='btn'>
+        {isDarkTheme ? 'Light Mode' : 'Dark Mode'}
+      </button>
 
       <Router>
         <myContext.Provider value={{ state, dispatch, cartItems, addToCart, removeFromCart }}>
